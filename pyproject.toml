@@ -7,6 +7,7 @@ authors = [
     { name = "Carl Kugblenu", email = "ckugblenu@gmail.com" }
 ]
 requires-python = ">=3.11"
+license = {text = "MIT"}
 dependencies = [
     "pyarrow>=14.0.0",
     "polars>=0.20.0",
@@ -15,6 +16,17 @@ dependencies = [
     "rich>=13.0.0",
 ]
 keywords = ["arrow", "flight", "data", "analytics", "duckdb", "airport", "polars", "pydantic", "typer", "rich"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Database",
+    "Topic :: Scientific/Engineering",
+]
 
 [project.scripts]
 fastairport = "fastairport.cli.main:main"
