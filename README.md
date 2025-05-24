@@ -118,9 +118,13 @@ if __name__ == "__main__":
 
 ### Run the Server
 
+You can run your FastAirport server in two ways:
+
+1. Using the CLI:
+
 ```bash
 # Run a server
-fastairport serve my_server.py --host 0.0.0.0 --port 8815
+fastairport serve server.py --host 0.0.0.0 --port 8815
 
 # List available endpoints and actions
 fastairport list endpoints
@@ -140,13 +144,11 @@ fastairport action call health
 fastairport ping server
 ```
 
-# Using the CLI
+2. Running directly with Python:
 
-fastairport serve server.py
-
-# Or run directly
-
+```bash
 python server.py
+```
 
 ---
 
