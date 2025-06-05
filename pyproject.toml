@@ -6,7 +6,7 @@ readme = "README.md"
 authors = [
     { name = "Carl Kugblenu", email = "ckugblenu@gmail.com" }
 ]
-requires-python = ">=3.11"
+requires-python = ">=3.9"
 license = {text = "MIT"}
 dependencies = [
     "pyarrow>=14.0.0",

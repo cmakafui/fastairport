@@ -1,4 +1,4 @@
-# FastAirport 0.2
+# FastAirport
 
 A tiny wrapper around Apache Arrow Flight for building analytical services.
 
