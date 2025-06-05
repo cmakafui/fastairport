@@ -1,6 +1,3 @@
-import types
-from pathlib import Path
-
 from typer.testing import CliRunner
 
 from fastairport.cli.main import app
