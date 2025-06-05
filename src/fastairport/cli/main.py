@@ -7,18 +7,15 @@ import sys
 from pathlib import Path
 
 import typer
-from rich.console import Console
 
 from .. import __version__, FastAirport
-
-console = Console()
 
 app = typer.Typer(help="FastAirport command line interface")
 
 
 def _version_callback(value: bool) -> None:
     if value:
-        console.print(f"FastAirport {__version__}")
+        typer.echo(f"FastAirport {__version__}")
         raise typer.Exit()
 
 
@@ -54,14 +51,14 @@ def serve(
     try:
         airport = _load_airport_from_file(file)
     except Exception as exc:
-        console.print(f"[red]Error loading '{file}': {exc}[/red]")
+        typer.echo(f"Error loading '{file}': {exc}", err=True)
         raise typer.Exit(code=1)
 
-    console.print(f"Starting [cyan]{airport.name}[/cyan] on [magenta]{host}:{port}[/magenta]")
+    typer.echo(f"Starting {airport.name} on {host}:{port}")
     try:
         airport.start(host=host, port=port)
     except KeyboardInterrupt:
-        console.print("[yellow]Server stopped by user.[/yellow]")
+        typer.echo("Server stopped by user.")
 
 
 def main() -> None:

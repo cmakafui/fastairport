@@ -5,7 +5,6 @@ A tiny wrapper around Apache Arrow Flight for building analytical services.
 ```python
 from fastairport import FastAirport, Context
 import pyarrow as pa
-import polars as pl
 
 airport = FastAirport("Demo")
 
